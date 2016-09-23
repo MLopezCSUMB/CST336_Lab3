@@ -1,28 +1,33 @@
 <?php
-function deal()
+
+function deal($deck,&$player)
 {
-    $randomNumber = rand(4,6);
+    $random = rand(4,6);
     
-    for($i =3;$i<$randomNumber;$i++)
+    for($i =0;$i<$random;$i++)
     {
-        $randomCard = rand(0,52);
-        for($j =0;$j<$cardsDealt.length();$j++)
-        {
-            if($cardsDealt[$j] != $randomCard)
-            {
-                 $hand.push($deck[$randomNumber]);
-                 $cardsDealt.push($deck[$randomNumber]);
-            }
-            else
-            {
-                $i--;
-            }
+        $random2 = rand(0,52);
         
-        }
+        
+      if($cardCheck()== false)
+      {
+          $player[$hand].push($deck[$random]);
+          $cardsDealt.push($deck[$random]);
+          
+      }
+       else
+       {
+           $i--;
+       } 
+       
+    }
+    for($i=0;$i<count($player[$hand]).length();$i++)
+    {
+        echo"$player[$hand][$i][$image]";
+        
     }
     
     
-
-    
 }
+
 ?>
