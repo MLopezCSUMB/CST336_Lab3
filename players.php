@@ -23,6 +23,6 @@ $players = array(
             )
         );
         
-        var_dump($players);
+       // var_dump($players);
 
 ?>

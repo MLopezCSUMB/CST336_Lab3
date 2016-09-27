@@ -1,15 +1,18 @@
 <?php
-static $cardsDelt = array();
-function cardCheck($player1, $player2, $player3, $player4)
+function cardCheck($dealt0,$person0)
 {
     $cardflag = false;
-    
-    $checker = array_intersect($cardsDelt,  $player1[$hand], $player2[$hand], $player3[$hand], $player4[$hand]);
-    if($checker.length() > 0)
+    for($j=0;J<count($dealt0);$j++)
     {
-        return true;
+    
+        for($i=0;$i<count($person0['hand']);$i++)
+        {
+                if($dealt0[j]==$person0['hand'][i])
+             {  
+                 $cardflag = true;
+             }
+        }   
     }
-
     return $cardflag;
 }
 ?>
